@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
   namespace :public do
     root to: 'blogs#index'
-    resources :users, only: [:edit, :update, :destroy]
+    resources :users, only: [:show, :edit, :update, :destroy]
     resources :blogs, except: [:index]
     get "/home/timeline" => "home#timeline"
     get "/follows/follower" => "follows#follower"
